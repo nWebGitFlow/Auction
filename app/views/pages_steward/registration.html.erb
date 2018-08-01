@@ -1,0 +1,30 @@
+<h1>PagesSteward#registration</h1>
+<a id="polit" href = "/politics">Политика обработки персональных данных</a>
+
+<p>Регистрационное окно Web-приложения</p>
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@user) do |f| %>
+
+      <%= f.label :login %>
+      <%= f.text_field :login %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.label :fullname %>
+      <%= f.text_field :fullname %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation %>
+
+      <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+<a id="home" href="/index">Вернуться на главную страницу</a>
+

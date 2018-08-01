@@ -1,0 +1,27 @@
+<% provide(:title, @user.login) %>
+<div class="row">
+  <aside class="span4">
+    <section>
+      <p>
+        <%= @user.fullname %>
+      </p>
+      <p>
+        <%= @user.action %>
+      </p>
+      <h1>Личный кабинет 
+      <% case @user.users_status_id 
+      		when 1 %>
+        <br> 
+      <a href="/runauction">Запустить аукцион</a>			
+      <% 	when 2 %>
+       продавца
+      <% 	when 3 %>
+       покупателя
+      <% 	when 4 %>
+       менеджера
+      <% end
+       %> 
+    </section>
+  </aside>
+</div>
+
